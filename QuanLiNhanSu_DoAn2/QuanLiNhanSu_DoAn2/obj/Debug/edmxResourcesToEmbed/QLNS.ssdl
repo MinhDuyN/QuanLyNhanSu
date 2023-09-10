@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLNSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tb_HOPDONG">
+    <Key>
+      <PropertyRef Name="SOHD" />
+    </Key>
+    <Property Name="SOHD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NGAYBATDAU" Type="date" />
+    <Property Name="NGAYKETHUC" Type="date" />
+    <Property Name="NGAYKY" Type="date" />
+    <Property Name="NOIDUNG" Type="nvarchar(max)" />
+    <Property Name="LANKY" Type="int" />
+    <Property Name="THOIHAN" Type="nvarchar" MaxLength="50" />
+    <Property Name="HESOLUONG" Type="float" />
+    <Property Name="MANV" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tb_KYCONG">
+    <Key>
+      <PropertyRef Name="MAKYCONG" />
+    </Key>
+    <Property Name="MAKYCONG" Type="int" Nullable="false" />
+    <Property Name="THANG" Type="int" />
+    <Property Name="NAM" Type="int" />
+    <Property Name="NGAYTINHCONG" Type="datetime" />
+    <Property Name="NGAYCONGTRONGTHANG" Type="float" />
+    <Property Name="MACTY" Type="int" />
+    <Property Name="KHOA" Type="bit" />
+    <Property Name="TRANGTHAI" Type="bit" />
+  </EntityType>
+  <EntityType Name="tb_KYCONGCHITIET">
+    <Key>
+      <PropertyRef Name="MAKYCONG" />
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Name="MAKYCONG" Type="int" Nullable="false" />
+    <Property Name="MANV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HOTEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="MACTY" Type="int" />
+    <Property Name="D1" Type="nvarchar" MaxLength="10" />
+    <Property Name="D2" Type="nvarchar" MaxLength="10" />
+    <Property Name="D3" Type="nvarchar" MaxLength="10" />
+    <Property Name="D4" Type="nvarchar" MaxLength="10" />
+    <Property Name="D5" Type="nvarchar" MaxLength="10" />
+    <Property Name="D6" Type="nvarchar" MaxLength="10" />
+    <Property Name="D7" Type="nvarchar" MaxLength="10" />
+    <Property Name="D8" Type="nvarchar" MaxLength="10" />
+    <Property Name="D9" Type="nvarchar" MaxLength="10" />
+    <Property Name="D10" Type="nvarchar" MaxLength="10" />
+    <Property Name="D11" Type="nvarchar" MaxLength="10" />
+    <Property Name="D12" Type="nvarchar" MaxLength="10" />
+    <Property Name="D13" Type="nvarchar" MaxLength="10" />
+    <Property Name="D14" Type="nvarchar" MaxLength="10" />
+    <Property Name="D15" Type="nvarchar" MaxLength="10" />
+    <Property Name="D16" Type="nvarchar" MaxLength="10" />
+    <Property Name="D17" Type="nvarchar" MaxLength="10" />
+    <Property Name="D18" Type="nvarchar" MaxLength="10" />
+    <Property Name="D19" Type="nvarchar" MaxLength="10" />
+    <Property Name="D20" Type="nvarchar" MaxLength="10" />
+    <Property Name="D21" Type="nvarchar" MaxLength="10" />
+    <Property Name="D22" Type="nvarchar" MaxLength="10" />
+    <Property Name="D23" Type="nvarchar" MaxLength="10" />
+    <Property Name="D24" Type="nvarchar" MaxLength="10" />
+    <Property Name="D25" Type="nvarchar" MaxLength="10" />
+    <Property Name="D26" Type="nvarchar" MaxLength="10" />
+    <Property Name="D27" Type="nvarchar" MaxLength="10" />
+    <Property Name="D28" Type="nvarchar" MaxLength="10" />
+    <Property Name="D29" Type="nvarchar" MaxLength="10" />
+    <Property Name="D30" Type="nvarchar" MaxLength="10" />
+    <Property Name="D31" Type="nvarchar" MaxLength="10" />
+    <Property Name="NGAYCONG" Type="float" />
+    <Property Name="NGAYPHEP" Type="float" />
+    <Property Name="NGHIKHONGPHEP" Type="float" />
+    <Property Name="CONGNGAYLE" Type="float" />
+    <Property Name="CONGCHUNHAT" Type="float" />
+    <Property Name="TONGNGAYCONG" Type="float" />
+    <Property Name="CREATED_BY" Type="int" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="UPDATED_BY" Type="int" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tb_LUONGNV">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenPhong" Type="nvarchar" MaxLength="50" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaLuong" Type="char" MaxLength="10" />
+    <Property Name="LCB" Type="int" />
+    <Property Name="PCChucVu" Type="int" />
+    <Property Name="Thuong" Type="nvarchar" MaxLength="50" />
+    <Property Name="KyLuat" Type="nvarchar" MaxLength="50" />
+    <Property Name="Thang" Type="char" MaxLength="10" />
+    <Property Name="Nam" Type="char" MaxLength="19" />
+    <Property Name="SoNgayCongThang" Type="int" />
+    <Property Name="SoNgayNghi" Type="int" />
+    <Property Name="SoGioLamThem" Type="int" />
+    <Property Name="Luong" Type="int" />
+    <Property Name="GhiChu" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tb_NHANVIEN">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaBoPhan" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="MaPhong" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="MaNV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaLuong" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="date" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="3" />
+    <Property Name="TTHonNhan" Type="nvarchar" MaxLength="50" />
+    <Property Name="CMTND" Type="nvarchar" MaxLength="50" />
+    <Property Name="NoiCap" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChucVu" Type="nvarchar" MaxLength="50" />
+    <Property Name="LoaiHD" Type="nvarchar" MaxLength="50" />
+    <Property Name="ThoiGian" Type="nvarchar" MaxLength="10" />
+    <Property Name="NgayKy" Type="date" />
+    <Property Name="NgayHetHan" Type="date" />
+    <Property Name="GhiChu" Type="nvarchar" MaxLength="100" />
+    <Property Name="MACTY" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="QLNSModelStoreContainer">
+    <EntitySet Name="tb_HOPDONG" EntityType="Self.tb_HOPDONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_KYCONG" EntityType="Self.tb_KYCONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_KYCONGCHITIET" EntityType="Self.tb_KYCONGCHITIET" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_LUONGNV" EntityType="Self.tb_LUONGNV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_NHANVIEN" EntityType="Self.tb_NHANVIEN" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
